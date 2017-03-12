@@ -1,11 +1,9 @@
 <h1>Meal Tracker</h1>
 <div class="container">
-<div (click)="showDetails(food)"  *ngFor="let food of foods">
-	<p>Name: {{food.name}}</p>
-	<p>Details: {{food.details}}</p>
-	<p>Calories: {{food.calories}}</p>
-	<button class="btn btn-primary" (click)="showDetails(food)">Edit</button>
-</div>
+	<app-food-list
+		[childfoods]="masterfoods">
+			
+		</app-food-list>
 <div *ngIf="selectedMeal">
 <h1>Edit Task</h1>
 <div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'app-food-list',
@@ -7,9 +8,6 @@ import { Component } from '@angular/core';
 })
 export class FoodListComponent  {
 
-   public foods: Meal[] = [
-  new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354),
-  new Meal("Fries", "I only ate half of them.", 365)
-  ];
+  @Input() childfoods: Meal[];
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+	 public masterfoods: Meal[] = [
+  new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354),
+  new Meal("Fries", "I only ate half of them.", 365)
+  ];
  
   selectedMeal: Meal = null;
   showDetails(clickedMeal: Meal) {
