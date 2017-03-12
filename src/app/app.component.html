@@ -1,13 +1,26 @@
-<h1>Meal Tracker</h1>
 <div class="container">
-	<app-food-list
-		[childfoods]="masterfoods"
-		(clickSender)="showDetails($event)"></app-food-list>	
-		
-	<app-edit-food
-		[childEditFood]="selectedMeal"
-		(doneEditingSender)="finishedEditing()"></app-edit-food>
+	<div class="jumbotron">
+  		<h1>Calorie-Meal Tracker</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<app-new-food (newFoodSender)="addTask($event)"></app-new-food>
+			<app-edit-food
+				[childEditFood]="selectedMeal"
+				(doneEditingSender)="finishedEditing()"></app-edit-food>
+		</div>
+		<div class="col-md-8">
+			<app-food-list
+				[childfoods]="masterfoods"
+				(clickSender)="showDetails($event)">
+			</app-food-list>	
+		</div>
 
-	<app-new-food (newFoodSender)="addTask($event)"></app-new-food>
+		
+			
+		
+	</div>
+
+	
 </div>
   

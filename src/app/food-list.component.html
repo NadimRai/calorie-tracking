@@ -1,11 +1,21 @@
 <select (change)="onChange($event.target.value)">
-  <option value="all">Show All</option>
+  <option value="all" selected="selected">Show All</option>
   <option value="highCalories">High Calories</option>
-  <option value="lowCalories" selected="selected">Low Calories</option>
+  <option value="lowCalories" >Low Calories</option>
 </select>
-<div *ngFor="let food of childfoods | completeness:selectedCompleteness">
-	<p>Name: {{food.name}}</p>
-	<p>Details: {{food.details}}</p>
-	<p>Calories: {{food.calories}}</p>
-	<button class="btn btn-primary" (click)="editFood(food)">Edit</button>
+<br>
+<br>
+<div class="row">
+	<div *ngFor="let food of childfoods | completeness:selectedCompleteness">
+		<div class="col-md-6">
+			<ul class="list-group">
+			<li class="list-group-item active">Name: {{food.name}}</li>
+			<li class="list-group-item">Details: {{food.details}}</li>
+			<li class="list-group-item">Calories: {{food.calories}}</li>
+			<li class="list-group-item"><button class="btn btn-info" (click)="editFood(food)"><i class="fa fa-scissors" aria-hidden="true"></i>	Edit</button></li>
+			</ul>
+			<br>
+			<br>
+		</div>
+	</div>
 </div>

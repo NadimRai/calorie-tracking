@@ -9,9 +9,10 @@ import { Meal } from './meal.model';
 export class AppComponent {
 
 	public masterfoods: Meal[] = [
-  new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354),
+  new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 800),
   new Meal("Fries", "I only ate half of them.", 365),
-  new Meal("Salad", "Had salad for lunch and dinner", 300)
+  new Meal("Salad", "Had salad for lunch and dinner", 300),
+  new Meal("Bbq Pork ribs", "Small portion for dinner", 600)
   ];
  
   selectedMeal: Meal = null;
