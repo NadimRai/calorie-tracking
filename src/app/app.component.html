@@ -1,24 +1,11 @@
 <h1>Meal Tracker</h1>
 <div class="container">
 	<app-food-list
-		[childfoods]="masterfoods">
-			
-		</app-food-list>
-<div *ngIf="selectedMeal">
-<h1>Edit Task</h1>
-<div>
-      <label>Enter Meal Name:</label>
-      <input [(ngModel)]="selectedMeal.name">
-    </div>
-    <div>
-      <label>Enter Meal Description:</label>
-      <input [(ngModel)]="selectedMeal.details">
-    </div>
-    <div>
-      <label>Enter Meal Calories:</label>
-      <input [(ngModel)]="selectedMeal.calories">
-       <button (click)="finishedEditing()">Done</button>
-    </div>
- </div>
+		[childfoods]="masterfoods"
+		(clickSender)="showDetails($event)"></app-food-list>	
+		
+	<app-edit-food
+		[childEditFood]="selectedMeal"
+		(doneEditingSender)="finishedEditing()"></app-edit-food>
 </div>
   

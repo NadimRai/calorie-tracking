@@ -1,0 +1,16 @@
+<div *ngIf="childEditFood">
+<h1>Edit Task</h1>
+<div>
+      <label>Enter Meal Name:</label>
+      <input [(ngModel)]="childEditFood.name">
+    </div>
+    <div>
+      <label>Enter Meal Description:</label>
+      <input [(ngModel)]="childEditFood.details">
+    </div>
+    <div>
+      <label>Enter Meal Calories:</label>
+      <input [(ngModel)]="childEditFood.calories">
+       <button (click)="doneEditing()">Done</button>
+    </div>
+ </div>
