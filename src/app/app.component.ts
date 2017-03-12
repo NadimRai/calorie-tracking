@@ -8,9 +8,10 @@ import { Meal } from './meal.model';
 })
 export class AppComponent {
 
-	 public masterfoods: Meal[] = [
+	public masterfoods: Meal[] = [
   new Meal("Hamburger", "Didn't get a soda or cheese on my burger!", 354),
-  new Meal("Fries", "I only ate half of them.", 365)
+  new Meal("Fries", "I only ate half of them.", 365),
+  new Meal("Salad", "Had salad for lunch and dinner", 300)
   ];
  
   selectedMeal: Meal = null;
@@ -19,6 +20,9 @@ export class AppComponent {
   }
   finishedEditing() {
   	this.selectedMeal = null;
+  }
+  addTask(foodChild: Meal){
+    this.masterfoods.push(foodChild);
   }
 }
 

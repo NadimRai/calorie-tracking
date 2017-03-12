@@ -7,5 +7,7 @@
 	<app-edit-food
 		[childEditFood]="selectedMeal"
 		(doneEditingSender)="finishedEditing()"></app-edit-food>
+
+	<app-new-food (newFoodSender)="addTask($event)"></app-new-food>
 </div>
   
