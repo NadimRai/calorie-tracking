@@ -1,0 +1,6 @@
+<div (click)="showDetails(food)"  *ngFor="let food of foods">
+	<p>Name: {{food.name}}</p>
+	<p>Details: {{food.details}}</p>
+	<p>Calories: {{food.calories}}</p>
+	<button class="btn btn-primary" (click)="showDetails(food)">Edit</button>
+</div>
