@@ -1,4 +1,9 @@
-<div *ngFor="let food of childfoods">
+<select (change)="onChange($event.target.value)">
+  <option value="all">Show All</option>
+  <option value="highCalories">High Calories</option>
+  <option value="lowCalories" selected="selected">Low Calories</option>
+</select>
+<div *ngFor="let food of childfoods | completeness:selectedCompleteness">
 	<p>Name: {{food.name}}</p>
 	<p>Details: {{food.details}}</p>
 	<p>Calories: {{food.calories}}</p>

@@ -9,8 +9,15 @@ import { Meal } from './meal.model';
 export class FoodListComponent  {
   @Input() childfoods: Meal[];
   @Output() clickSender = new EventEmitter();
+
   editFood(foodToEdit: Meal){
   	this.clickSender.emit(foodToEdit);
   }
+
+  public selectedCompleteness: string = "all";
+  onChange(optionFromMenu) {
+  this.selectedCompleteness = optionFromMenu;
+  console.log(this.selectedCompleteness);
+}
 
 }
